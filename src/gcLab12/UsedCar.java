@@ -10,13 +10,27 @@ public class UsedCar extends Car{
 		this.mileage = mileage;
 		
 	}
+	
+
+
+
+	
+	public UsedCar(String make, String model, int year, double price, double mileage, Dealership dealer) {
+		super(make, model, year, price, dealer);
+		this.mileage = mileage;
+	}
+
+
+
+
 
 	@Override
 	public String toString() {
-		return "UsedCar [mileage=" + mileage + ", getMake()=" + getMake() + ", getModel()=" + getModel()
-				+ ", getYear()=" + getYear() + ", getPrice()=" + getPrice() + "]";
+		return "UsedCar [mileage=" + mileage + ", toString()=" + super.toString() + "]";
 	}
-	
+
+
+
 	public double getMileage() {
 		return mileage;
 	}

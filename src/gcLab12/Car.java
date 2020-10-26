@@ -6,6 +6,7 @@ public class Car {
 	private String model;
 	private int year;
 	private double price;
+	private Dealership dealer;
 	
 	public Car () {
 		//no args constructor
@@ -19,6 +20,16 @@ public class Car {
 		this.price = price;
 		
 	}
+	
+	public Car(String make, String model, int year, double price, Dealership dealer) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.price = price;
+		this.dealer = dealer;
+	}
+
 
 	public String getMake() {
 		return make;
@@ -54,7 +65,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [make=" + make + ", model=" + model + ", year=" + year + ", price=" + price + "]";
+		return "Car [make=" + make + ", model=" + model + ", year=" + year + ", price=" + price + ", dealer=" + dealer
+				+ "]";
 	}
 	
 	

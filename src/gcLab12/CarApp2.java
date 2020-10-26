@@ -10,13 +10,14 @@ public class CarApp2 {
 
 		Scanner scn = new Scanner(System.in);
 		int userSelection = -1;
+		Dealership dealer = new Dealership("Denooyer", "Kalamazoo");
 		
-		Car a = new Car("Nikolai","Model S", 2017, 54999.90);
-		Car b = new Car("Fourd","Escapade", 2017, 31999.90);
-		Car c = new Car("Chewie","Vette", 2017, 44989.90);
-		Car d = new UsedCar("Hyonda","Prior", 2015, 14795.90,35987.6);
-		Car e = new UsedCar("GC","Chirpus", 2013, 8500.90, 12345);
-		Car f = new UsedCar("GC","Witherell", 2016, 14450.90, 3500.3);
+		Car a = new Car("Nikolai","Model S", 2017, 54999.90,dealer);
+		Car b = new Car("Fourd","Escapade", 2017, 31999.90,dealer);
+		Car c = new Car("Chewie","Vette", 2017, 44989.90,dealer);
+		Car d = new UsedCar("Hyonda","Prior", 2015, 14795.90,35987.6,dealer);
+		Car e = new UsedCar("GC","Chirpus", 2013, 8500.90, 12345,dealer);
+		Car f = new UsedCar("GC","Witherell", 2016, 14450.90, 3500.3,dealer);
 		
 		availableCars.add(a);
 		availableCars.add(b);
@@ -47,6 +48,10 @@ public class CarApp2 {
 		}
 		System.out.println("Have a great day!");
 		scn.close();
+		for(int i = 0; i < availableCars.size(); i++) {
+			System.out.println(availableCars.get(i).toString());
+		}
+
 
 	}
 	

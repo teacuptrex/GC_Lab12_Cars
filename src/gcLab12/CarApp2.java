@@ -48,10 +48,6 @@ public class CarApp2 {
 		}
 		System.out.println("Have a great day!");
 		scn.close();
-		for(int i = 0; i < availableCars.size(); i++) {
-			System.out.println(availableCars.get(i).toString());
-		}
-
 
 	}
 	
@@ -86,6 +82,12 @@ public class CarApp2 {
 					availableCars.get(userSelection).getModel(), availableCars.get(userSelection).getYear(),
 					availableCars.get(userSelection).getPrice());
 		} 
+	}
+	
+	public static void printAll() {
+		for(int i = 0; i < availableCars.size(); i++) {
+			System.out.println(availableCars.get(i).toString());
+		}
 	}
 	
 }

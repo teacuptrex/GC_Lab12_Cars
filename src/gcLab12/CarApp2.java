@@ -56,9 +56,8 @@ public class CarApp2 {
 		System.out.printf("%-14s %-10s %-10s %-10s %-10s\r\n", "Enter to Select", "Make", "Model", "Year", "Price");
 		for (int i = 0; i < availableCars.size(); i++) {
 			if (availableCars.get(i) instanceof UsedCar) {
-				Car temp = new Car();
-				temp = availableCars.get(i);
-				UsedCar u = (UsedCar) temp;
+
+				UsedCar u = (UsedCar) availableCars.get(i);
 				System.out.printf("%-14s %-10s %-10s %-10s $%-10s %-10s\r\n", i + 1, u.getMake(), u.getModel(),
 						u.getYear(), u.getPrice() + " (Used)", u.getMileage() + " miles");
 			} else {
@@ -72,9 +71,8 @@ public class CarApp2 {
 	
 	public static void displaySelectedCar(int userSelection) {
 		if (availableCars.get(userSelection) instanceof UsedCar) {
-			Car temp = new Car();
-			temp = availableCars.get(userSelection);
-			UsedCar u = (UsedCar) temp;
+
+			UsedCar u = (UsedCar) availableCars.get(userSelection);
 			System.out.printf("%-14s  %-10s %-10s $%-10s %-10s\r\n", u.getMake(), u.getModel(), u.getYear(),
 					u.getPrice() + " (Used)", u.getMileage() + " miles");
 		} else {
